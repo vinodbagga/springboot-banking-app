@@ -76,16 +76,16 @@ public class AccountController {
 		return ResponseEntity.ok("Account number "+accountId+" Deleted Successfully.....");
 	}
 
-	@GetMapping("/all")
-	public ResponseEntity<List<AccountDto>> getAllAccounts() {
-		List<AccountDto> accounts = accountService.getAllAccounts();
-		return ResponseEntity.ok(accounts);
-	}
-//	
-//	@GetMapping("/list")
-//	public List<AccountDto> getAllAccountsList() {
-//	    return accountService.getAllAccounts();
+//	@GetMapping("/all")
+//	public ResponseEntity<List<AccountDto>> getAllAccounts() {
+//		List<AccountDto> accounts = accountService.getAllAccounts();
+//		return ResponseEntity.ok(accounts);
 //	}
+//	
+	@GetMapping("/list")
+	public List<AccountDto> getAllAccountsList() {
+	    return accountService.getAllAccounts();
+	}
 	
 
 }
